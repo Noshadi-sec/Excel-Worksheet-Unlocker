@@ -6,7 +6,7 @@ An application to remove worksheet password protection from Microsoft Excel file
 
 ## How It Works 
 
-Modern `.xlsx` files are essentially ZIP archives containing various XML files and other assets that define the workbook. Worksheet protection is specified by a `<sheetProtection ... />` tag within the XML file for each specific sheet (e.g., `xl/worksheets/sheet1.xml`).
+`.xlsx` files are essentially ZIP archives containing various XML files and other assets that define the workbook. Worksheet protection is specified by a `<sheetProtection ... />` tag within the XML file for each specific sheet (e.g., `xl/worksheets/sheet1.xml`).
 
 This tool automates the following process:
 1.  **Unzips** the input `.xlsx` file in memory.
@@ -16,7 +16,7 @@ This tool automates the following process:
 
 ---
 
-## Features ✨
+## Features
 
 * **Simple GUI:** An intuitive interface built with Tkinter.
 * **No Password Needed:** Removes protection without needing the original password.
