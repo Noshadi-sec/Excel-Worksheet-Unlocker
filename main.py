@@ -98,6 +98,19 @@ class App:
         self.status_label = tk.Label(self.main_frame, text="Status: Waiting for file...", wraplength=450, justify="left", font=("Helvetica", 10))
         self.status_label.pack(pady=10, fill="x")
 
+        self.description_label = tk.Label(
+            self.main_frame,
+            text="This software helps you remove password protection from worksheets in an .xlsx file.",
+            wraplength=460,
+            justify="center",
+            font=("Helvetica", 11)
+        )
+        self.description_label.pack(pady=(0, 15))
+
+
+
+
+
     def select_file(self):
         """Opens a file dialog to select an .xlsx file."""
         path = filedialog.askopenfilename(

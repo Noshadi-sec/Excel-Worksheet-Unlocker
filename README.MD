@@ -34,12 +34,14 @@ You can either run the application directly from the Python source code or packa
 You don't need any external libraries to run this script, as it only uses Python's standard libraries.
 
 1.  **Prerequisites:** Make sure you have **Python 3** installed on your system.
-2.  **Save the Code:** Save the provided code as a Python file (e.g., `unprotector_app.py`).
+2.  **Save the Code:** Save the provided code as a Python file (e.g., `main.py`).
 3.  **Run the App:** Open your terminal or command prompt, navigate to the directory where you saved the file, and run:
     ```bash
-    python unprotector_app.py
+    python main.py
     ```
-4.  **Follow GUI steps:**
+4.  **you must see the GUI**
+
+5.  **Follow GUI steps:**
     * Click "**1. Select Excel File (.xlsx)**" to choose the protected file.
     * Click "**2. Remove Protection and Save**" to choose a location to save the new, unprotected file.
 
