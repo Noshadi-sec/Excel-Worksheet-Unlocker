@@ -68,7 +68,13 @@ This process bundles the script into a single executable file that can run on ot
 
 3.  **Find Your App:** A `dist` folder will be created. Your standalone application (`ExcelUnprotector.exe` or `ExcelUnprotector.app`) will be inside it.
 
+### Option 3: use executable file in the repository it is only for the windows operating system
+
+
 ---
+## Acknowledgements
+
+This project's idea for removing worksheet protection was inspired by the work done on the [Excel-Worksheet-Password-Remover](https://github.com/aziascreations/Excel-Worksheet-Password-Remover) 
 
 ## Disclaimer
 

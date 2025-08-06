@@ -108,9 +108,6 @@ class App:
         self.description_label.pack(pady=(0, 15))
 
 
-
-
-
     def select_file(self):
         """Opens a file dialog to select an .xlsx file."""
         path = filedialog.askopenfilename(
