@@ -31,9 +31,6 @@ If you want to run the Python script directly, you can download the source code.
     ```bash
     python main.py
     ```
-
----
-
 ## How It Works
 
 An `.xlsx` file is essentially a ZIP archive containing various XML files. Worksheet protection is specified by a `<sheetProtection ... />` tag within the XML for that sheet. This tool automates the process of unzipping the file, finding and removing that tag, and re-zipping the contents into a new, unprotected file.
