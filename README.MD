@@ -24,13 +24,16 @@ If you want to run the Python script directly, you can download the source code.
 2.  **Download the Code**: You can either clone the repository with Git or download it as a ZIP file.
     * **Using Git (recommended):**
         ```bash
-        git clone [https://github.com/Noshadi-sec/Excel_Worksheet_Unlocker.git](https://github.com/Noshadi-sec/Excel_Worksheet_Unlocker.git)
+        git clone https://github.com/Noshadi-sec/Excel_Worksheet_Unlocker.git
         ```
     * **As a ZIP file:** On the main repository page, click the green `< > Code` button and select "Download ZIP".
 3.  **Run the App**: Open your terminal, navigate into the project directory, and run the script:
     ```bash
     python main.py
     ```
+
+---
+
 ## How It Works
 
 An `.xlsx` file is essentially a ZIP archive containing various XML files. Worksheet protection is specified by a `<sheetProtection ... />` tag within the XML for that sheet. This tool automates the process of unzipping the file, finding and removing that tag, and re-zipping the contents into a new, unprotected file.
