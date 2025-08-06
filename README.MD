@@ -2,80 +2,80 @@
 
 An application to remove worksheet password protection from Microsoft Excel files (`.xlsx`). This tool does **not** recover the password; it directly removes the protection flag from the file's underlying XML structure.
 
+
+
 ---
 
-## How It Works 
+## Getting Started
 
-`.xlsx` files are essentially ZIP archives containing various XML files and other assets that define the workbook. Worksheet protection is specified by a `<sheetProtection ... />` tag within the XML file for each specific sheet (e.g., `xl/worksheets/sheet1.xml`).
+There are two ways to use this application. The easiest method is to download the pre-built application.
 
-This tool automates the following process:
-1.  **Unzips** the input `.xlsx` file in memory.
-2.  Iterates through each file in the archive.
-3.  For each worksheet XML file, it uses a regular expression to find and **remove the `<sheetProtection.../>` tag**.
-4.  **Re-zips** the modified contents into a new `.xlsx` file, leaving the original file untouched.
+### Method 1: Download the Application (Easiest)
+
+You can download the ready-to-use `.exe` application for Windows from the official Releases page. No installation is needed.
+
+**[Download the latest release here](https://github.com/Noshadi-sec/Excel_Worksheet_Unlocker/releases)**
+
+### Method 2: Run from Source Code (For Developers)
+
+If you want to run the Python script directly, you can download the source code.
+
+1.  **Prerequisites**: Make sure you have **Python 3** installed on your system.
+2.  **Download the Code**: You can either clone the repository with Git or download it as a ZIP file.
+    * **Using Git (recommended):**
+        ```bash
+        git clone [https://github.com/Noshadi-sec/Excel_Worksheet_Unlocker.git](https://github.com/Noshadi-sec/Excel_Worksheet_Unlocker.git)
+        ```
+    * **As a ZIP file:** On the main repository page, click the green `< > Code` button and select "Download ZIP".
+3.  **Run the App**: Open your terminal, navigate into the project directory, and run the script:
+    ```bash
+    python main.py
+    ```
+
+---
+
+## How It Works
+
+An `.xlsx` file is essentially a ZIP archive containing various XML files. Worksheet protection is specified by a `<sheetProtection ... />` tag within the XML for that sheet. This tool automates the process of unzipping the file, finding and removing that tag, and re-zipping the contents into a new, unprotected file.
 
 ---
 
 ## Features
 
-* **Simple GUI:** An intuitive interface built with Tkinter.
-* **No Password Needed:** Removes protection without needing the original password.
-* **Safe:** Creates a new, unprotected copy of your file. Your original file is never modified.
-* **Cross-Platform:** The Python script works on Windows, macOS, and Linux. Standalone executables can be created for Windows and macOS.
+* **Simple GUI**: An intuitive interface built with Tkinter.
+* **No Password Needed**: Removes protection without needing the original password.
+* **Safe**: Creates a new, unprotected copy of your file, leaving the original untouched.
+* **Cross-Platform**: The Python script works on Windows, macOS, and Linux.
 
 ---
 
-## Installation and Usage
+## Building executable file from Source (Optional)
 
-You can either run the application directly from the Python source code or package it as a standalone executable.
+If you want to create your own standalone executable from the source code, you can use PyInstaller.
 
-### Option 1: Running from Source Code
-
-You don't need any external libraries to run this script, as it only uses Python's standard libraries.
-
-1.  **Prerequisites:** Make sure you have **Python 3** installed on your system.
-2.  **Save the Code:** Save the provided code as a Python file (e.g., `main.py`).
-3.  **Run the App:** Open your terminal or command prompt, navigate to the directory where you saved the file, and run:
-    ```bash
-    python main.py
-    ```
-4.  **you must see the GUI**
-
-5.  **Follow GUI steps:**
-    * Click "**1. Select Excel File (.xlsx)**" to choose the protected file.
-    * Click "**2. Remove Protection and Save**" to choose a location to save the new, unprotected file.
-
-### Option 2: Creating a Standalone Application
-
-This process bundles the script into a single executable file that can run on other computers without needing Python installed.
-
-1.  **Install PyInstaller:** First, install the packaging tool from your terminal:
+1.  **Install PyInstaller**:
     ```bash
     pip install pyinstaller
     ```
-2.  **Create the Executable:** Navigate to your script's directory in the terminal and run the command for your operating system.
-
+2.  **Create the Executable**: Navigate to the script's directory and run the command for your OS.
     * **For Windows (.exe)**
         ```bash
         pyinstaller --onefile --windowed --name ExcelUnprotector main.py
         ```
-
     * **For macOS (.app)**
-        This command creates the `.app` bundle. You can optionally add an icon file (`.icns` format) for a more professional look.
         ```bash
         pyinstaller --onefile --windowed --name ExcelUnprotector --icon=your_icon.icns main.py
         ```
-
-3.  **Find Your App:** A `dist` folder will be created. Your standalone application (`ExcelUnprotector.exe` or `ExcelUnprotector.app`) will be inside it.
-
-### Option 3: use executable file in the repository it is only for the windows operating system
-
+3.  **Find Your App**: The new application will be inside the `dist` folder.
 
 ---
+
 ## Acknowledgements
 
-This project's idea for removing worksheet protection was inspired by the work done on the [Excel-Worksheet-Password-Remover](https://github.com/aziascreations/Excel-Worksheet-Password-Remover) 
+This project was inspired by the work done on the [Excel-Worksheet-Password-Remover](https://github.com/aziascreations/Excel-Worksheet-Password-Remover) repository.
+
+---
 
 ## Disclaimer
 
-This tool is intended for educational purposes and for recovering your own files where you have forgotten the password. Use it responsibly and only on files you have the right to modify.
+This tool is intended for educational purposes and for recovering access to your own files. Use it responsibly and only on files you have the right to modify.
