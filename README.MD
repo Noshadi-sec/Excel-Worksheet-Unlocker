@@ -2,7 +2,10 @@
 
 An application to remove worksheet password protection from Microsoft Excel files (`.xlsx`). This tool does **not** recover the password; it directly removes the protection flag from the file's underlying XML structure.
 
+**Publisher:** Noshadi-sec
 
+![Python](https://img.shields.io/badge/python-3.8+-blue.svg)
+![License](https://img.shields.io/badge/License-MIT-yellow.svg)
 
 ---
 
