@@ -82,3 +82,4 @@ This project was inspired by the work done on the [Excel-Worksheet-Password-Remo
 ## Disclaimer
 
 This tool is intended for educational purposes and for recovering access to your own files. Use it responsibly and only on files you have the right to modify.
+" " 
